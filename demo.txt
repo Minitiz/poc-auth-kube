@@ -1,0 +1,5 @@
+### demo
+
+> k get secrets api-serviceaccount-token-4hcvf -oyaml | yq e '(.data.token)' - | base64 -d
+
+`XXXXXXXXXXXXXXXXXXXX`

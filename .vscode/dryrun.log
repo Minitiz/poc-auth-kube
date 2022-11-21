@@ -1,0 +1,20 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/pierreyvesliegeois/repository/poc-auth'
+/Library/Developer/CommandLineTools/usr/bin/make -C demo/services/api build-docker
+ 
+make[1]: Entering directory `/Users/pierreyvesliegeois/repository/poc-auth/demo/services/api'
+docker build . -t api-test:local
+minikube image unload api-test:local
+minikube image load api-test:local
+make[1]: Leaving directory `/Users/pierreyvesliegeois/repository/poc-auth/demo/services/api'
+cp go.mod demo/services/storage-hub
+/Library/Developer/CommandLineTools/usr/bin/make -C demo/services/storage-hub build-docker
+ 
+make[1]: Entering directory `/Users/pierreyvesliegeois/repository/poc-auth/demo/services/storage-hub'
+docker build -t storage-hub:local .
+minikube image unload storage-hub:local
+minikube image load storage-hub:local
+make[1]: Leaving directory `/Users/pierreyvesliegeois/repository/poc-auth/demo/services/storage-hub'
+rm demo/services/storage-hub/go.mod
+make: Leaving directory `/Users/pierreyvesliegeois/repository/poc-auth'
+ 
