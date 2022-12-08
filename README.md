@@ -11,5 +11,5 @@
 
 ## CONS
 
-* ca reste un hack => c'est le debut d'une CRD sans vraiment l'implémenter
+* ca reste un hack => c'est le debut d'un controllerk8s sans vraiment l'implémenter
 * petite connaissance du kube?
