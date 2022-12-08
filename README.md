@@ -12,4 +12,4 @@
 ## CONS
 
 * ca reste un hack => c'est le debut d'un controllerk8s sans vraiment l'implémenter
-* petite connaissance du kube?
+* petite connaissance du kube demandé?
